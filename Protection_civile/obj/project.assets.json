@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ameur\\Desktop\\9raya\\Protection_civile\\Protection_civile\\Protection_civile.csproj",
+      "projectUniqueName": "C:\\Users\\Ameur\\Desktop\\9raya\\asp.net\\Protection_civile\\Protection_civile.csproj",
       "projectName": "Protection_civile",
-      "projectPath": "C:\\Users\\Ameur\\Desktop\\9raya\\Protection_civile\\Protection_civile\\Protection_civile.csproj",
+      "projectPath": "C:\\Users\\Ameur\\Desktop\\9raya\\asp.net\\Protection_civile\\Protection_civile.csproj",
       "packagesPath": "C:\\Users\\Ameur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ameur\\Desktop\\9raya\\Protection_civile\\Protection_civile\\obj\\",
+      "outputPath": "C:\\Users\\Ameur\\Desktop\\9raya\\asp.net\\Protection_civile\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ameur\\AppData\\Roaming\\NuGet\\NuGet.Config",
