@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ameur\\Desktop\\9raya\\Protection_civile\\Protection_civile\\Protection_civile.csproj": {}
+    "C:\\Users\\ASUS\\Desktop\\project\\asp.net\\Protection_civile\\Protection_civile.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ameur\\Desktop\\9raya\\Protection_civile\\Protection_civile\\Protection_civile.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\project\\asp.net\\Protection_civile\\Protection_civile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ameur\\Desktop\\9raya\\Protection_civile\\Protection_civile\\Protection_civile.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\project\\asp.net\\Protection_civile\\Protection_civile.csproj",
         "projectName": "Protection_civile",
-        "projectPath": "C:\\Users\\Ameur\\Desktop\\9raya\\Protection_civile\\Protection_civile\\Protection_civile.csproj",
-        "packagesPath": "C:\\Users\\Ameur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ameur\\Desktop\\9raya\\Protection_civile\\Protection_civile\\obj\\",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\project\\asp.net\\Protection_civile\\Protection_civile.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\project\\asp.net\\Protection_civile\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ameur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,26 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.21, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.21, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.3.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
