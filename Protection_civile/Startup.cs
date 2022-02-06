@@ -26,6 +26,7 @@ namespace Protection_civile
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddRazorPages(); 
 
             services.AddDbContext<ProtectioncivileContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("ProtectioncivileContext")));
@@ -48,14 +49,16 @@ namespace Protection_civile
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
+            
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Desktop\\project\\asp.net\\Protection_civile\\Protection_civile.csproj": {}
+    "C:\\Users\\ASUS\\Desktop\\project\\AspNet\\Protection_civile\\Protection_civile.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Desktop\\project\\asp.net\\Protection_civile\\Protection_civile.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\project\\AspNet\\Protection_civile\\Protection_civile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\project\\asp.net\\Protection_civile\\Protection_civile.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\project\\AspNet\\Protection_civile\\Protection_civile.csproj",
         "projectName": "Protection_civile",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\project\\asp.net\\Protection_civile\\Protection_civile.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\project\\AspNet\\Protection_civile\\Protection_civile.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\project\\asp.net\\Protection_civile\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\project\\AspNet\\Protection_civile\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.21, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.21, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.21, )"
