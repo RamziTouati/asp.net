@@ -14,6 +14,7 @@ namespace Protection_civile.Data
         {
         }
         public DbSet<Protection_civile.Models.Demande> Demande { get; set; }
+        public DbSet<Protection_civile.Models.RapportInitial> RapportInitial { get; set; }
 
         
     }

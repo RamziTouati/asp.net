@@ -16,4 +16,8 @@
     <PackageReference Include="NHibernate" Version="5.3.10" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>

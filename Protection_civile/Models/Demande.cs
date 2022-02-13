@@ -15,13 +15,20 @@ namespace Protection_civile.Models
         public string numcin { get; set; }
         public string nomentreprise { get; set; }
         public string adresse { get; set; }
+        public string activite { get; set; }
 
         public string type { get; set; }
         public string categorie { get; set; }
         public DateTime Date { get; set; }
         public string numdemande { get; set; }
         public string numrecu { get; set; }
-      
-        
-}
+        public virtual ICollection<RapportInitial> RapportInitials { get; set; }
+        public virtual RapportFinal RapportFinal { get; set; } 
+        public virtual Attestation Attestation { get; set; }
+        public virtual Paiement Paiment { get; set; }
+
+
+
+
+    }
 }
