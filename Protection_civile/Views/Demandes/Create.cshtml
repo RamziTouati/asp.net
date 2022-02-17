@@ -4,9 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>Demande</h4>
+<H2> اضافة المطلب</H2>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -16,12 +14,8 @@
                 <label asp-for="nom" class="control-label">الاسم</label>
                 <input asp-for="nom" class="form-control" />
                 <span asp-validation-for="nom" class="text-danger"></span>
-            </div> 
-            <div class="form-group">
-                <label asp-for="activite" class="control-label">activite</label>
-                <input asp-for="activite" class="form-control" />
-                <span asp-validation-for="activite" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="prenom" class="control-label">اللقب</label>
                 <input asp-for="prenom" class="form-control" />
@@ -43,6 +37,11 @@
                 <span asp-validation-for="nomentreprise" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="activite" class="control-label">النشاط</label>
+                <input asp-for="activite" class="form-control" />
+                <span asp-validation-for="activite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="adresse" class="control-label">العنوان</label>
                 <input asp-for="adresse" class="form-control" />
                 <span asp-validation-for="adresse" class="text-danger"></span>
@@ -53,7 +52,7 @@
                 <span asp-validation-for="type" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="categorie" class="control-label"|>الصنف</label>
+                <label asp-for="categorie" class="control-label" |>الصنف</label>
                 <input asp-for="categorie" class="form-control" />
                 <span asp-validation-for="categorie" class="text-danger"></span>
             </div>
@@ -73,14 +72,14 @@
                 <span asp-validation-for="numrecu" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="تسحيل" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">الرجوع الى القائمة</a>
 </div>
 
 @section Scripts {

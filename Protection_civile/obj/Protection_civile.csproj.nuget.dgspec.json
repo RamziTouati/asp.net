@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Desktop\\project\\AspNet\\Protection_civile\\Protection_civile.csproj": {}
+    "C:\\Users\\Ameur\\Desktop\\9raya\\asp.net\\Protection_civile\\Protection_civile.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Desktop\\project\\AspNet\\Protection_civile\\Protection_civile.csproj": {
+    "C:\\Users\\Ameur\\Desktop\\9raya\\asp.net\\Protection_civile\\Protection_civile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\project\\AspNet\\Protection_civile\\Protection_civile.csproj",
+        "projectUniqueName": "C:\\Users\\Ameur\\Desktop\\9raya\\asp.net\\Protection_civile\\Protection_civile.csproj",
         "projectName": "Protection_civile",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\project\\AspNet\\Protection_civile\\Protection_civile.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\project\\AspNet\\Protection_civile\\obj\\",
+        "projectPath": "C:\\Users\\Ameur\\Desktop\\9raya\\asp.net\\Protection_civile\\Protection_civile.csproj",
+        "packagesPath": "C:\\Users\\Ameur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ameur\\Desktop\\9raya\\asp.net\\Protection_civile\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ameur\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

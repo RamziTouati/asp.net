@@ -45,20 +45,50 @@ namespace Protection_civile.Controllers
             return View(rapportInitial);
         }
 
-        // GET: RapportInitials/Create
-        public IActionResult Create()
+        // GET: RapportInitials/Create/5
+        public async Task<IActionResult> Create(int? id)
         {
+            var DataDemande = await _context.Demande.FindAsync(id);
+            if (DataDemande.Id == id)
+            {
+                ViewBag.id = id;
+                ViewBag.nom = DataDemande.nom;
+                ViewBag.prenom = DataDemande.prenom;
+                ViewBag.tel = DataDemande.tel;
+                ViewBag.numrecu = DataDemande.numrecu;
+            }
+            else
+            {
+                return NotFound();
+            }
+           
+            
+     
             ViewData["DemandeId"] = new SelectList(_context.Demande, "Id", "Id");
             return View();
         }
 
-        // POST: RapportInitials/Create
+        // POST: RapportInitials/Create/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,DateN,description,DemandeId")] RapportInitial rapportInitial)
+        public async Task<IActionResult> Create(int id, [Bind("Id,DateN,description,DemandeId")] RapportInitial rapportInitial)
         {
+            if (ModelState.IsValid)
+            {
+                _context.Add(rapportInitial);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["DemandeId"] = new SelectList(_context.Demande, "Id", "Id", rapportInitial.DemandeId);
+            return View(rapportInitial);
+        }
+        
+        public async Task<IActionResult> Creater( [Bind("Id,DateN,description,DemandeId")] RapportInitial rapportInitial)
+        {
+           
+
             if (ModelState.IsValid)
             {
                 _context.Add(rapportInitial);
@@ -156,5 +186,7 @@ namespace Protection_civile.Controllers
         {
             return _context.RapportInitial.Any(e => e.Id == id);
         }
+
+      
     }
 }

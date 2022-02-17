@@ -5,32 +5,45 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Create</h1>
+<H2> اضافة تقرير اولي </H2>
 
-<h4>RapportInitial</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <p>Nom : @ViewBag.nom</p>
+        <p>Prenom : @ViewBag.prenom</p>
+        <p>numero de telephone : @ViewBag.tel</p>
+        <p>numero CIN : @ViewBag.numrecu</p>
+        <form asp-action="Creater" method="post">
+     
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="DateN" class="control-label"></label>
                 <input asp-for="DateN" class="form-control" />
                 <span asp-validation-for="DateN" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="description" class="control-label"></label>
-                <input asp-for="description" class="form-control" />
-                <span asp-validation-for="description" class="text-danger"></span>
-            </div>
+
+
             <div class="form-group">
                 <label asp-for="DemandeId" class="control-label"></label>
-                <select asp-for="DemandeId" class ="form-control" asp-items="ViewBag.DemandeId"></select>
+
+                <input asp-for="DemandeId" class="form-control" value="@ViewBag.id" />
+
             </div>
+            <div class="form-group">
+                <label asp-for="description" class="control-label"></label>
+                <textarea asp-for="description" class="form-control"></textarea>
+                <span asp-validation-for="description" class="text-danger"></span>
+            </div>
+
+
+
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
+
     </div>
 </div>
 
