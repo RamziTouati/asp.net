@@ -1,0 +1,87 @@
+﻿@model Protection_civile.Models.Demande
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<H2> حذف المطلب</H2>
+
+
+<div>
+
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nom)
+        </dt>
+        <dt class = "col-sm-10">
+            @Html.DisplayFor(model => model.nom)
+        </dt>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.prenom)
+        </dt>
+        <dt class = "col-sm-10">
+            @Html.DisplayFor(model => model.prenom)
+        </dt>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tel)
+        </dt>
+        <dt class = "col-sm-10">
+            @Html.DisplayFor(model => model.tel)
+        </dt>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.numcin)
+        </dt>
+        <dt class = "col-sm-10">
+            @Html.DisplayFor(model => model.numcin)
+        </dt>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nomentreprise)
+        </dt>
+        <dt class = "col-sm-10">
+            @Html.DisplayFor(model => model.nomentreprise)
+        </dt>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.adresse)
+        </dt>
+        <dt class = "col-sm-10">
+            @Html.DisplayFor(model => model.adresse)
+        </dt>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+        <dt class = "col-sm-10">
+            @Html.DisplayFor(model => model.type)
+        </dt>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.categorie)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(model => model.categorie)
+        </dt>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dt class = "col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dt>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.numdemande)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(model => model.numdemande)
+            </dt>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.numrecu)
+        </dt>
+        <dt class = "col-sm-10">
+            @Html.DisplayFor(model => model.numrecu)
+        </dt>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="حذف" class="btn btn-danger" /> |
+        <a asp-action="Index">الرجوع الى القائمة</a>
+    </form>
+</div>

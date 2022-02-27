@@ -1,0 +1,56 @@
+﻿@model Protection_civile.Models.RapportInitial
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<H2> اضافة تقرير اولي </H2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <p>Nom : @ViewBag.nom</p>
+        <p>Prenom : @ViewBag.prenom</p>
+        <p>numero de telephone : @ViewBag.tel</p>
+        <p>numero CIN : @ViewBag.numrecu</p>
+        <form asp-action="Creater" method="post">
+     
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DateN" class="control-label"></label>
+                <input asp-for="DateN" class="form-control" />
+                <span asp-validation-for="DateN" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="DemandeId" class="control-label"></label>
+
+                <input asp-for="DemandeId" class="form-control" value="@ViewBag.id" />
+
+            </div>
+            <div class="form-group">
+                <label asp-for="description" class="control-label"></label>
+                <textarea asp-for="description" class="form-control"></textarea>
+                <span asp-validation-for="description" class="text-danger"></span>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
