@@ -61,11 +61,14 @@ html {
   position: relative;
   min-height: 100%;
 }
-
+.container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    direction: rtl !important;
+    direction: rtl ;
     text-align: right;
 }
 .footer {
@@ -92,5 +95,5 @@ body {
     flex: 1;
 }
 .btnGroup {
-    text-align: right;
+    text-align: left;
 }
