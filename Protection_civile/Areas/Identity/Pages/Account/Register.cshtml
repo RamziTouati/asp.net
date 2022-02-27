@@ -5,7 +5,7 @@
     Layout = "~/Areas/Identity/Pages/AuthLayout.cshtml";
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1>احداث حساب</h1>
 
 
         <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
@@ -13,21 +13,21 @@
                 <div class="col-md-6">
                   
                     <div class="form-group">
-                        <label asp-for="Input.Firstname"></label>
+                        <label >الاسم</label>
                         <input asp-for="Input.Firstname" class="form-control" />
                     </div>
                 </div>
                 <div class="col-md-6">
              
                     <div class="form-group">
-                        <label asp-for="Input.LastName"></label>
+                        <label asp-for="Input.LastName">اللقب</label>
                         <input asp-for="Input.LastName" class="form-control" />
                     </div>
                 </div>
                 <div class="col-md-12">
                     
                     <div class="form-group">
-                        <label asp-for="Input.Email"></label>
+                        <label asp-for="Input.Email">البريد الالكتروني</label>
                         <input asp-for="Input.Email" class="form-control" />
                         <span asp-validation-for="Input.Email" class="text-danger"></span>
                     </div>
@@ -36,7 +36,7 @@
                 <div class="col-md-6">
 
                     <div class="form-group">
-                        <label asp-for="Input.Password"></label>
+                        <label asp-for="Input.Password">كلمة العبور</label>
                         <input asp-for="Input.Password" class="form-control" />
                         <span asp-validation-for="Input.Password" class="text-danger"></span>
                     </div>
@@ -45,13 +45,13 @@
                 <div class="col-md-6">
 
                     <div class="form-group">
-                        <label asp-for="Input.ConfirmPassword"></label>
+                        <label asp-for="Input.ConfirmPassword">تاكيد كلمة العبور</label>
                         <input asp-for="Input.ConfirmPassword" class="form-control" />
                         <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                     </div>
                 </div> <div class="col-md-12">
 
-                    <button type="submit" class="btn btn-primary">Register</button>
+                    <button type="submit" class="btn btn-primary">تسجيل</button>
                     <div asp-validation-summary="All" class="text-danger"></div>
                 </div>
 

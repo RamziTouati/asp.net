@@ -581,3 +581,8 @@ C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\R
 C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\Razor\Views\RapportFinals\Details.cshtml.g.cs
 C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\Razor\Views\RapportFinals\Edit.cshtml.g.cs
 C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\Razor\Views\RapportFinals\Index.cshtml.g.cs
+C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\Razor\Views\Attestations\Create.cshtml.g.cs
+C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\Razor\Views\Attestations\Delete.cshtml.g.cs
+C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\Razor\Views\Attestations\Details.cshtml.g.cs
+C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\Razor\Views\Attestations\Edit.cshtml.g.cs
+C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\Razor\Views\Attestations\Index.cshtml.g.cs

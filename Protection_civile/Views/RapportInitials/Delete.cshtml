@@ -8,43 +8,38 @@
 
     <H2> حذف تقرير اولي </H2>
     <div>
-        <h4>RapportInitial</h4>
+        
         <hr />
         <dl class="row">
             <dt class="col-sm-2">
                 @Html.DisplayNameFor(model => model.DateN)
             </dt>
-            <dd class="col-sm-10">
+            <dt class="col-sm-10">
                 @Html.DisplayFor(model => model.DateN)
-            </dd><dt class="col-sm-2">
+            </dt><dt class="col-sm-2">
                 @Html.DisplayNameFor(model => model.numri)
             </dt>
-            <dd class="col-sm-10">
+            <dt class="col-sm-10">
                 @Html.DisplayFor(model => model.numri)
-            </dd><dt class="col-sm-2">
+            </dt><dt class="col-sm-2">
                 @Html.DisplayNameFor(model => model.Datev)
             </dt>
-            <dd class="col-sm-10">
+            <dt class="col-sm-10">
                 @Html.DisplayFor(model => model.Datev)
-            </dd>
+            </dt>
             <dt class="col-sm-2">
                 @Html.DisplayNameFor(model => model.description)
             </dt>
-            <dd class="col-sm-10">
+            <dt class="col-sm-10">
                 @Html.DisplayFor(model => model.description)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.demande)
             </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.demande.Id)
-            </dd>
+            
         </dl>
 
         <form asp-action="Delete">
             <input type="hidden" asp-for="Id" />
-            <input type="submit" value="Delete" class="btn btn-danger" /> |
-            <a asp-action="Index">Back to List</a>
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            <a asp-action="Index">الرجوع الى القائمة</a>
         </form>
     </div>
     </div>

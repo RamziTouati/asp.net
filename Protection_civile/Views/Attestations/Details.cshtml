@@ -1,4 +1,4 @@
-﻿@model Protection_civile.Models.RapportFinal
+﻿@model Protection_civile.Models.Attestation
 
 @{
     ViewData["Title"] = "Details";
@@ -6,23 +6,24 @@
 }
 <div class="container">
 
-    <H2> تفاصيل خاصة بتقرير نهائي </H2>
+    <H2> تفاصيل  شهادة الوقاية </H2>
+
     <div>
+        <h4>Attestation</h4>
         <hr />
         <dl class="row">
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.numrf)
-            </dt>
-            <dt class="col-sm-10">
-                @Html.DisplayFor(model => model.numrf)
-            </dt>
-            <dt class="col-sm-2">
                 @Html.DisplayNameFor(model => model.DateN)
             </dt>
-            <dt class="col-sm-10">
+            <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.DateN)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.demande)
             </dt>
-           
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.demande.Id)
+            </dd>
         </dl>
     </div>
     <div>

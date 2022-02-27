@@ -11,47 +11,48 @@
     <hr />
     <div class="row">
         <div class="col-md-4">
-            <p>Nom : @ViewBag.nom</p>
-            <p>Prenom : @ViewBag.prenom</p>
-            <p>numero de telephone : @ViewBag.tel</p>
-            <p>numero CIN : @ViewBag.numrecu</p>
+            <p>النشاط : @ViewBag.activite</p>
+            <p>العنوان : @ViewBag.adresse</p>
+            <p>النوع: @ViewBag.type</p>
+            <p>الصنف: @ViewBag.categorie</p>
             <form asp-action="Creater" method="post">
 
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
-                    <label asp-for="DateN" class="control-label"></label>
+                    <label asp-for="DateN" class="control-label">تاريخ التقرير</label>
                     <input asp-for="DateN" class="form-control" />
                     <span asp-validation-for="DateN" class="text-danger"></span>
                 </div> 
                 <div class="form-group">
-                    <label asp-for="numri" class="control-label"></label>
+                    <label asp-for="numri" class="control-label">رقم التقرير الاولي</label>
                     <input asp-for="numri" class="form-control" />
                     <span asp-validation-for="numri" class="text-danger"></span>
                 </div> 
                 <div class="form-group">
-                    <label asp-for="Datev" class="control-label"></label>
+                    <label asp-for="Datev" class="control-label">تاريخ الزيارة</label>
                     <input asp-for="Datev" class="form-control" />
                     <span asp-validation-for="Datev" class="text-danger"></span>
                 </div>
 
 
                 <div class="form-group">
-                    <label asp-for="DemandeId" class="control-label"></label>
 
-                    <input asp-for="DemandeId" class="form-control" value="@ViewBag.id" />
+                    <input asp-for="DemandeId" type="hidden" class="form-control" value="@ViewBag.id" />
 
                 </div>
                 <div class="form-group">
                     <label asp-for="description" class="control-label"></label>
-                    <textarea asp-for="description" class="form-control"></textarea>
-                    <span asp-validation-for="description" class="text-danger"></span>
+
+                    <input asp-for="description" class="form-control"  />
+
                 </div>
+             
 
 
 
 
                 <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <input type="submit" value="تسحيل" class="btn btn-primary" />
                 </div>
             </form>
 
@@ -59,7 +60,7 @@
     </div>
 
     <div>
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Index">الرجوع الى القائمة</a>
     </div>
     </div>
 

@@ -52,10 +52,10 @@ namespace Protection_civile.Controllers
             if (DataDemande.Id == id)
             {
                 ViewBag.id = id;
-                ViewBag.nom = DataDemande.nom;
-                ViewBag.prenom = DataDemande.prenom;
-                ViewBag.tel = DataDemande.tel;
-                ViewBag.numrecu = DataDemande.numrecu;
+                ViewBag.activite = DataDemande.activite;
+                ViewBag.adresse = DataDemande.adresse;
+                ViewBag.type = DataDemande.type;
+                ViewBag.categorie = DataDemande.categorie;
             }
             else
             {
