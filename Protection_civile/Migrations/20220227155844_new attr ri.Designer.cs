@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Protection_civile.Data;
 
 namespace Protection_civile.Migrations
 {
     [DbContext(typeof(ProtectioncivileContext))]
-    partial class ProtectioncivileContextModelSnapshot : ModelSnapshot
+    [Migration("20220227155844_new attr ri")]
+    partial class newattrri
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -123,9 +125,6 @@ namespace Protection_civile.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<int>("DemandeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("numrf")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

@@ -6,6 +6,8 @@ namespace Protection_civile.Models
     public class RapportInitial
     {
         public int Id { get; set; }
+        public int numri { get; set; }
+        public DateTime Datev { get; set; }
         public DateTime DateN { get; set; }
         public string description { get; set; }
         public int DemandeId { get; set; }
@@ -13,4 +15,5 @@ namespace Protection_civile.Models
         public virtual Demande demande { get; set; }
 
     }
+    
 }

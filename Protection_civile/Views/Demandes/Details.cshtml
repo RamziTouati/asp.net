@@ -15,8 +15,10 @@
             <div class="btnGroup">
                 <a asp-area="" asp-controller="RapportInitials" asp-route-id="@Model.Id" asp-action="Create">
                     <button type="button" class="btn btn-primary">تقرير اولي</button>
-                </a>
-                <button type="button" class="btn btn-primary">تقرير نهائي</button>
+                </a><a asp-area="" asp-controller="RapportFinals" asp-route-id="@Model.Id" asp-action="Create">
+                     <button type="button" class="btn btn-primary">تقرير نهائي</button>
+                        </a>
+               
                 <button type="button" class="btn btn-primary">شهادةالوقاية</button>
 
             </div>

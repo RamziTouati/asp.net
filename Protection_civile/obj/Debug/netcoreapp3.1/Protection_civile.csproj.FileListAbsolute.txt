@@ -576,3 +576,8 @@ C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\P
 C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\Protection_civile.dll
 C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\Protection_civile.pdb
 C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\Protection_civile.genruntimeconfig.cache
+C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\Razor\Views\RapportFinals\Create.cshtml.g.cs
+C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\Razor\Views\RapportFinals\Delete.cshtml.g.cs
+C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\Razor\Views\RapportFinals\Details.cshtml.g.cs
+C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\Razor\Views\RapportFinals\Edit.cshtml.g.cs
+C:\Users\Ameur\Desktop\9raya\asp.net\Protection_civile\obj\Debug\netcoreapp3.1\Razor\Views\RapportFinals\Index.cshtml.g.cs

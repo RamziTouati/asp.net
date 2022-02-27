@@ -10,23 +10,23 @@ using Protection_civile.Models;
 
 namespace Protection_civile.Controllers
 {
-    public class RapportInitialsController : Controller
+    public class RapportFinalsController : Controller
     {
         private readonly ProtectioncivileContext _context;
 
-        public RapportInitialsController(ProtectioncivileContext context)
+        public RapportFinalsController(ProtectioncivileContext context)
         {
             _context = context;
         }
 
-        // GET: RapportInitials
+        // GET: RapportFinals
         public async Task<IActionResult> Index()
         {
-            var protectioncivileContext = _context.RapportInitial.Include(r => r.demande);
+            var protectioncivileContext = _context.RapportFinal.Include(r => r.demande);
             return View(await protectioncivileContext.ToListAsync());
         }
 
-        // GET: RapportInitials/Details/5
+        // GET: RapportFinals/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,18 +34,18 @@ namespace Protection_civile.Controllers
                 return NotFound();
             }
 
-            var rapportInitial = await _context.RapportInitial
+            var rapportFinal = await _context.RapportFinal
                 .Include(r => r.demande)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (rapportInitial == null)
+            if (rapportFinal == null)
             {
                 return NotFound();
             }
 
-            return View(rapportInitial);
+            return View(rapportFinal);
         }
 
-        // GET: RapportInitials/Create/5
+        // GET: RapportFinals/Create
         public async Task<IActionResult> Create(int? id)
         {
             var DataDemande = await _context.Demande.FindAsync(id);
@@ -61,45 +61,41 @@ namespace Protection_civile.Controllers
             {
                 return NotFound();
             }
-           
-            
-     
             ViewData["DemandeId"] = new SelectList(_context.Demande, "Id", "Id");
             return View();
         }
 
-        // POST: RapportInitials/Create/5
+        // POST: RapportFinals/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(int id, [Bind("Id,DateN,numri,Datev,description,DemandeId")] RapportInitial rapportInitial)
+        public async Task<IActionResult> Create([Bind("Id,numrf,DateN,DemandeId")] RapportFinal rapportFinal)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(rapportInitial);
+                _context.Add(rapportFinal);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DemandeId"] = new SelectList(_context.Demande, "Id", "Id", rapportInitial.DemandeId);
-            return View(rapportInitial);
+            ViewData["DemandeId"] = new SelectList(_context.Demande, "Id", "Id", rapportFinal.DemandeId);
+            return View(rapportFinal);
         }
-        
-        public async Task<IActionResult> Creater( [Bind("Id,DateN,numri,Datev,description,DemandeId")] RapportInitial rapportInitial)
+        public async Task<IActionResult> Creater([Bind("Id,numrf,DateN,DemandeId")] RapportFinal rapportFinal)
         {
-           
+
 
             if (ModelState.IsValid)
             {
-                _context.Add(rapportInitial);
+                _context.Add(rapportFinal);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DemandeId"] = new SelectList(_context.Demande, "Id", "Id", rapportInitial.DemandeId);
-            return View(rapportInitial);
+            ViewData["DemandeId"] = new SelectList(_context.Demande, "Id", "Id", rapportFinal.DemandeId);
+            return View(rapportFinal);
         }
 
-        // GET: RapportInitials/Edit/5
+        // GET: RapportFinals/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -107,23 +103,23 @@ namespace Protection_civile.Controllers
                 return NotFound();
             }
 
-            var rapportInitial = await _context.RapportInitial.FindAsync(id);
-            if (rapportInitial == null)
+            var rapportFinal = await _context.RapportFinal.FindAsync(id);
+            if (rapportFinal == null)
             {
                 return NotFound();
             }
-            ViewData["DemandeId"] = new SelectList(_context.Demande, "Id", "Id", rapportInitial.DemandeId);
-            return View(rapportInitial);
+            ViewData["DemandeId"] = new SelectList(_context.Demande, "Id", "Id", rapportFinal.DemandeId);
+            return View(rapportFinal);
         }
 
-        // POST: RapportInitials/Edit/5
+        // POST: RapportFinals/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,DateN,numri,Datev,description,DemandeId")] RapportInitial rapportInitial)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,numrf,DateN,DemandeId")] RapportFinal rapportFinal)
         {
-            if (id != rapportInitial.Id)
+            if (id != rapportFinal.Id)
             {
                 return NotFound();
             }
@@ -132,12 +128,12 @@ namespace Protection_civile.Controllers
             {
                 try
                 {
-                    _context.Update(rapportInitial);
+                    _context.Update(rapportFinal);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!RapportInitialExists(rapportInitial.Id))
+                    if (!RapportFinalExists(rapportFinal.Id))
                     {
                         return NotFound();
                     }
@@ -148,11 +144,11 @@ namespace Protection_civile.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DemandeId"] = new SelectList(_context.Demande, "Id", "Id", rapportInitial.DemandeId);
-            return View(rapportInitial);
+            ViewData["DemandeId"] = new SelectList(_context.Demande, "Id", "Id", rapportFinal.DemandeId);
+            return View(rapportFinal);
         }
 
-        // GET: RapportInitials/Delete/5
+        // GET: RapportFinals/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -160,33 +156,31 @@ namespace Protection_civile.Controllers
                 return NotFound();
             }
 
-            var rapportInitial = await _context.RapportInitial
+            var rapportFinal = await _context.RapportFinal
                 .Include(r => r.demande)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (rapportInitial == null)
+            if (rapportFinal == null)
             {
                 return NotFound();
             }
 
-            return View(rapportInitial);
+            return View(rapportFinal);
         }
 
-        // POST: RapportInitials/Delete/5
+        // POST: RapportFinals/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var rapportInitial = await _context.RapportInitial.FindAsync(id);
-            _context.RapportInitial.Remove(rapportInitial);
+            var rapportFinal = await _context.RapportFinal.FindAsync(id);
+            _context.RapportFinal.Remove(rapportFinal);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool RapportInitialExists(int id)
+        private bool RapportFinalExists(int id)
         {
-            return _context.RapportInitial.Any(e => e.Id == id);
+            return _context.RapportFinal.Any(e => e.Id == id);
         }
-
-      
     }
 }
