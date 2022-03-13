@@ -61,9 +61,15 @@ html {
   position: relative;
   min-height: 100%;
 }
+nav .container {
+    margin: auto !important;
+}
 .container{
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.btns-pos {
+    text-align: left;
 }
 body {
     /* Margin bottom by footer height */

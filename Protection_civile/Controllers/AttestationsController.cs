@@ -52,10 +52,10 @@ namespace Protection_civile.Controllers
             if (DataDemande.Id == id)
             {
                 ViewBag.id = id;
-                ViewBag.nom = DataDemande.nom;
-                ViewBag.prenom = DataDemande.prenom;
-                ViewBag.tel = DataDemande.tel;
-                ViewBag.numrecu = DataDemande.numrecu;
+                ViewBag.activite = DataDemande.activite;
+                ViewBag.adresse = DataDemande.adresse;
+                ViewBag.type = DataDemande.type;
+                ViewBag.categorie = DataDemande.categorie;
             }
             else
             {
@@ -71,7 +71,7 @@ namespace Protection_civile.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,DateN,DemandeId")] Attestation attestation)
+        public async Task<IActionResult> Create([Bind("Id,numatt,DateN,DemandeId")] Attestation attestation)
         {
             if (ModelState.IsValid)
             {
@@ -83,8 +83,9 @@ namespace Protection_civile.Controllers
             return View(attestation);
         }
 
-        public async Task<IActionResult> Creater([Bind("Id,DateN,DemandeId")] Attestation attestation)
+        public async Task<IActionResult> Creater([Bind("Id,numatt,DateN,DemandeId")] Attestation attestation)
         {
+
 
             if (ModelState.IsValid)
             {
@@ -118,7 +119,7 @@ namespace Protection_civile.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,DateN,DemandeId")] Attestation attestation)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,numatt,DateN,DemandeId")] Attestation attestation)
         {
             if (id != attestation.Id)
             {

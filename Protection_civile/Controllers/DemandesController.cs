@@ -151,5 +151,23 @@ namespace Protection_civile.Controllers
         {
             return _context.Demande.Any(e => e.Id == id);
         }
+
+        [AllowAnonymous]
+        public async Task<IActionResult> Filter(string searchString)
+        {
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+             var allDemandes = _context.Demande.Where(m => m.nom == searchString);
+                //var filteredResult = allMovies.Where(n => n.Name.ToLower().Contains(searchString.ToLower()) || n.Description.ToLower().Contains(searchString.ToLower())).ToList();
+
+                //var filteredResultNew = allMovies.Where(n => string.Equals(n.Name, searchString, StringComparison.CurrentCultureIgnoreCase) || string.Equals(n.Description, searchString, StringComparison.CurrentCultureIgnoreCase)).ToList();
+
+                return View("Index", allDemandes);
+            }
+           
+
+            return View("Index");
+        }
     }
 }

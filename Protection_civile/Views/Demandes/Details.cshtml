@@ -5,7 +5,6 @@
 }
 <div class="container">
     <h1>المطلب</h1>
-
     <div>
         <div class="main">
             <div>
@@ -22,89 +21,84 @@
                 <a asp-area="" asp-controller="Attestations" asp-route-id="@Model.Id" asp-action="Create">
                     <button type="button" class="btn btn-primary">شهادةالوقاية</button>
                 </a>
-               
-              
-
             </div>
-
-
-
         </div>
 
-
-
         <hr />
-        <dl class="row">
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.nom)
-            </dt>
-            <dt class="col-sm-10">
-                @Html.DisplayFor(model => model.nom)
-            </dt>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.prenom)
-            </dt>
-            <dt class="col-sm-10">
-                @Html.DisplayFor(model => model.prenom)
-            </dt>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.tel)
-            </dt>
-            <dt class="col-sm-10">
-                @Html.DisplayFor(model => model.tel)
-            </dt>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.numcin)
-            </dt>
-            <dt class="col-sm-10">
-                @Html.DisplayFor(model => model.numcin)
-            </dt>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.nomentreprise)
-            </dt>
-            <dt class="col-sm-10">
-                @Html.DisplayFor(model => model.nomentreprise)
-            </dt>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.adresse)
-            </dt>
-            <dt class="col-sm-10">
-                @Html.DisplayFor(model => model.adresse)
-            </dt>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.type)
-            </dt>
-            <dt class="col-sm-10">
-                @Html.DisplayFor(model => model.type)
-            </dt>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.categorie)
-            </dt>
-            <dt class="col-sm-10">
-                @Html.DisplayFor(model => model.categorie)
-            </dt>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Date)
-            </dt>
-            <dt class="col-sm-10">
-                @Html.DisplayFor(model => model.Date)
-            </dt>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.numdemande)
-            </dt>
-            <dt class="col-sm-10">
-                @Html.DisplayFor(model => model.numdemande)
-            </dt>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.numrecu)
-            </dt>
-            <dt class="col-sm-10">
-                @Html.DisplayFor(model => model.numrecu)
-            </dt>
-        </dl>
+        <div class=" shadow-lg p-3 mb-5 bg-white rounded">
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.nom)
+                </dt>
+                <dt class="col-sm-10">
+                    @Html.DisplayFor(model => model.nom)
+                </dt>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.prenom)
+                </dt>
+                <dt class="col-sm-10">
+                    @Html.DisplayFor(model => model.prenom)
+                </dt>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.tel)
+                </dt>
+                <dt class="col-sm-10">
+                    @Html.DisplayFor(model => model.tel)
+                </dt>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.numcin)
+                </dt>
+                <dt class="col-sm-10">
+                    @Html.DisplayFor(model => model.numcin)
+                </dt>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.nomentreprise)
+                </dt>
+                <dt class="col-sm-10">
+                    @Html.DisplayFor(model => model.nomentreprise)
+                </dt>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.adresse)
+                </dt>
+                <dt class="col-sm-10">
+                    @Html.DisplayFor(model => model.adresse)
+                </dt>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.type)
+                </dt>
+                <dt class="col-sm-10">
+                    @Html.DisplayFor(model => model.type)
+                </dt>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.categorie)
+                </dt>
+                <dt class="col-sm-10">
+                    @Html.DisplayFor(model => model.categorie)
+                </dt>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Date)
+                </dt>
+                <dt class="col-sm-10">
+                    @Html.DisplayFor(model => model.Date)
+                </dt>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.numdemande)
+                </dt>
+                <dt class="col-sm-10">
+                    @Html.DisplayFor(model => model.numdemande)
+                </dt>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.numrecu)
+                </dt>
+                <dt class="col-sm-10">
+                    @Html.DisplayFor(model => model.numrecu)
+                </dt>
+            </dl>
+            <div class="btns-pos">
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model.Id">اصلاح</a>
+                <a class="btn btn-secondary" asp-action="Index">الرجوع الى القائمة</a>
+            </div>
+        </div>
     </div>
-    <div>
-        <a asp-action="Edit" asp-route-id="@Model.Id">اصلاح</a> |
-        <a asp-action="Index">الرجوع الى القائمة</a>
-    </div>
+ 
     </div>

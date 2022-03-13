@@ -9,8 +9,8 @@
     <H2> اضافة تقرير اولي </H2>
 
     <hr />
-    <div class="row">
-        <div class="col-md-4">
+    <div class="row shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="col-md-12">
             <p>النشاط : @ViewBag.activite</p>
             <p>العنوان : @ViewBag.adresse</p>
             <p>النوع: @ViewBag.type</p>
@@ -18,49 +18,41 @@
             <form asp-action="Creater" method="post">
 
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
+                <div class="form-group col-md-4">
                     <label asp-for="DateN" class="control-label">تاريخ التقرير</label>
                     <input asp-for="DateN" class="form-control" />
                     <span asp-validation-for="DateN" class="text-danger"></span>
                 </div> 
-                <div class="form-group">
+                <div class="form-group col-md-4">
                     <label asp-for="numri" class="control-label">رقم التقرير الاولي</label>
                     <input asp-for="numri" class="form-control" />
                     <span asp-validation-for="numri" class="text-danger"></span>
                 </div> 
-                <div class="form-group">
+                <div class="form-group col-md-4">
                     <label asp-for="Datev" class="control-label">تاريخ الزيارة</label>
                     <input asp-for="Datev" class="form-control" />
                     <span asp-validation-for="Datev" class="text-danger"></span>
                 </div>
 
 
-                <div class="form-group">
+                <div class="form-group col-md-4">
 
                     <input asp-for="DemandeId" type="hidden" class="form-control" value="@ViewBag.id" />
 
                 </div>
-                <div class="form-group">
+                <div class="form-group col-md-4">
                     <label asp-for="description" class="control-label"></label>
-
                     <input asp-for="description" class="form-control"  />
-
                 </div>
-             
-
-
-
-
                 <div class="form-group">
-                    <input type="submit" value="تسحيل" class="btn btn-primary" />
+                    <div class="btns-pos">
+                        <input type="submit" value="تسحيل" class="btn btn-primary" />
+                        <a class="btn btn-secondary" asp-action="Index">الرجوع الى القائمة</a>
+                    </div>
                 </div>
             </form>
 
         </div>
-    </div>
-
-    <div>
-        <a asp-action="Index">الرجوع الى القائمة</a>
     </div>
     </div>
 
